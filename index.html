@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEPS Service | Vitrine Mobile</title>
+    <style>
+        :root {
+            --primary: #007bff; --secondary: #2d3436; --accent: #00cec9;
+            --light: #f8f9fa; --dark: #1e272e; --success: #2ecc71;
+            --danger: #e74c3c; --gold: #fdcb6e;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
+
+        /* BANDEAU */
+        .promo-bar { background: var(--secondary); color: white; padding: 10px 0; font-weight: bold; text-align: center; overflow: hidden; }
+        .promo-text { display: inline-block; white-space: nowrap; animation: scroll-text 15s linear infinite; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        @keyframes scroll-text { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+
+        /* NAV */
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: white; padding: 80px 5%; text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+
+        /* OFFRE */
+        .welcome-offer { background: white; max-width: 800px; margin: -40px auto 40px; padding: 30px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; border: 2px dashed var(--gold); position: relative; z-index: 10; }
+        .counter { display: inline-block; background: var(--gold); color: var(--dark); padding: 5px 15px; border-radius: 50px; font-weight: 800; margin-top: 15px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+        /* PRODUITS & ACCESSOIRES */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .product-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; transition: all 0.3s ease; position: relative; border: 1px solid #eee; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-10px); }
+        .badge { position: absolute; top: 15px; left: 15px; background: var(--accent); color: var(--dark); padding: 5px 15px; font-size: 0.75rem; font-weight: bold; border-radius: 20px; text-transform: uppercase; z-index: 2; }
+        .product-card img { width: 100%; height: 250px; object-fit: contain; margin-bottom: 20px; }
+        .price { font-size: 1.4rem; font-weight: bold; color: var(--primary); margin-bottom: 10px; }
+        .btn-contact { display: inline-block; background: var(--primary); color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; width: 100%; margin-top: auto; }
+        
+        /* STYLE SPECIFIQUE ACCESSOIRES */
+        .accessory-card img { height: 200px; } 
+        
+        /* FOOTER */
+        .contact-footer { background: var(--dark); color: white; padding: 60px 5%; display: flex; flex-wrap: wrap; justify-content: space-around; gap: 40px; }
+        footer { background: #111; color: #777; text-align: center; padding: 20px; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <div class="promo-bar">
+        <div class="promo-text">⚡ OFFRE DE BIENVENUE : Une réparation de téléphone OFFERTE pour les 100 premiers inscrits ! ⚡</div>
+    </div>
+
+    <nav>
+        <div class="logo">PEPS SERVICE</div>
+        <div class="nav-links">
+            <a href="#produits">Téléphones</a>
+            <a href="#accessoires">Accessoires</a>
+            <a href="rep.html">Réparation</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>PEPSSERVICE.FR</h1>
+        <p>Expertise High-Tech à Saint-Ouen</p>
+    </header>
+
+    <section>
+        <div class="welcome-offer">
+            <h3>🎁 Cadeau de Bienvenue</h3>
+            <p>Inscrivez-vous dès maintenant pour faire partie des privilégiés.</p>
+            <p><strong>Réparation d'écran ou de batterie 100% OFFERTE</strong></p>
+            <div class="counter">Plus que 35 places disponibles !</div>
+            <br><br>
+            <a href="login.html" class="btn-contact" style="width: auto; background: var(--secondary);">M'inscrire gratuitement</a>
+        </div>
+    </section>
+
+    <section id="produits">
+        <h2 style="text-align: center; margin-bottom: 40px;">Nos Smartphones</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="badge" style="background: #000; color: #fff;">Exclusif</div>
+                <img src="iphone17.jpg" alt="iPhone 17 Pro Max">
+                <h3>iPhone 17 Pro Max</h3>
+                <p class="price">1399 €</p>
+                <p style="color: var(--success); font-weight: bold;">● En stock (5)</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Commande iPhone 17 Pro Max" class="btn-contact">Commander</a>
+            </div>
+
+            <div class="product-card">
+                <div class="badge" style="background: #2d3436; color: #fff;">Ultra AI</div>
+                <img src="s25.jpg" alt="Samsung S25 Ultra">
+                <h3>Samsung S25 Ultra</h3>
+                <p class="price">1469 €</p>
+                <p style="color: var(--success); font-weight: bold;">● En stock (8)</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Commande S25 Ultra" class="btn-contact">Commander</a>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">Nouveau</div>
+                <img src="Apple-iPhone-16-finish-lineup-240909.webp" alt="iPhone 16">
+                <h3>iPhone 16</h3>
+                <p class="price">700 €</p>
+                <p style="color: var(--success); font-weight: bold;">● En stock (15)</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Commande iPhone 16" class="btn-contact">Commander</a>
+            </div>
+
+            <div class="product-card">
+                <div class="badge" style="background: #a29bfe;">IA Intégrée</div>
+                <img src="1618_edithor_terminaux_Carrousel_01_Samsung_Galaxy_S24_Noir_6763ea9fa33528016427d3a7.PNG" alt="Samsung S24">
+                <h3>Samsung Galaxy S24</h3>
+                <p class="price">400 €</p>
+                <p style="color: var(--danger); font-weight: bold;">● Stock limité (3)</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Commande Galaxy S24" class="btn-contact">Commander</a>
+            </div>
+
+            <div class="product-card">
+                <div class="badge" style="background: #ff6b00;">Bon Plan</div>
+                <img src="LD0006200168.jpg" alt="Xiaomi Redmi Note 14">
+                <h3>Xiaomi Redmi Note 14</h3>
+                <p class="price">249 €</p>
+                <p style="color: var(--success); font-weight: bold;">● En stock (20)</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Commande Redmi Note 14" class="btn-contact">Commander</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="accessoires" style="background-color: #fff;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Nos Coques & Protections</h2>
+        <div class="product-grid">
+            
+            <div class="product-card accessory-card">
+                <div class="badge" style="background: #999;">Invisible</div>
+                <img src="coque_transparante.jpg" alt="Coque Transparente iPhone 17">
+                <h3>Coque iPhone 17</h3>
+                <p>Transparente, anti-jaunissement.</p>
+                <p class="price">15 €</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Coque Transparente iPhone 17" class="btn-contact">Acheter</a>
+            </div>
+
+            <div class="product-card accessory-card">
+                <div class="badge" style="background: #555;">Smart View</div>
+                <img src="coq_avecfenetreintelligente.jpg" alt="Coque S25 Fenêtre">
+                <h3>Etui Smart View S25</h3>
+                <p>Protection avec fenêtre intelligente.</p>
+                <p class="price">49 €</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Coque S25 Ultra" class="btn-contact">Acheter</a>
+            </div>
+
+            <div class="product-card accessory-card">
+                <div class="badge" style="background: #333;">MagSafe</div>
+                <img src="mw-500045_forall.webp" alt="Coque iPhone 16">
+                <h3>Coque iPhone 16</h3>
+                <p>Silicone renforcé compatible MagSafe.</p>
+                <p class="price">29 €</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Coque iPhone 16" class="btn-contact">Acheter</a>
+            </div>
+
+            <div class="product-card accessory-card">
+                <div class="badge" style="background: #333;">Antichoc</div>
+                <img src="61quvnWxirL._AC_UF1000,1000_QL80_.jpg" alt="Coque Samsung S24">
+                <h3>Coque Galaxy S24</h3>
+                <p>Protection intégrale transparente.</p>
+                <p class="price">25 €</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Coque Samsung S24" class="btn-contact">Acheter</a>
+            </div>
+
+            <div class="product-card accessory-card">
+                <div class="badge" style="background: #ff6b00;">Promo</div>
+                <img src="61WF6L5RQKL._AC_UF1000,1000_QL80_.jpg" alt="Coque Xiaomi">
+                <h3>Coque Redmi Note 14</h3>
+                <p>Design fin et protection caméra.</p>
+                <p class="price">19 €</p>
+                <a href="mailto:contact@pepsservice.fr?subject=Coque Xiaomi" class="btn-contact">Acheter</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-footer">
+        <div class="contact-box">
+            <h3>Coordonnées</h3>
+            <p>📍 29 Rue des Entrepôts, 93400 Saint-Ouen</p>
+            <p>📞 09 87 56 45 70</p>
+            <p>📧 contact@pepsservice.fr</p>
+        </div>
+        <div class="contact-box">
+            <h3>Horaires</h3>
+            <p>Lun - Ven : 09:00 - 19:00</p>
+            <p>Samedi : 10:00 - 18:00</p>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 PEPS SERVICE - www.pepsservice.fr</footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === '1') {
+            alert("✅ INSCRIPTION RÉUSSIE !\n\nBienvenue chez PEPS SERVICE. Vous faites partie des 100 premiers inscrits pour la réparation offerte !");
+            window.history.replaceState(null, null, window.location.pathname);
+        }
+    </script>
+
+</body>
+</html>
