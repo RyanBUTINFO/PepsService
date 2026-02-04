@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ3R0QZ350"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FZ3R0QZ350');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription | PEPS Service</title>
     <style>
         :root { --primary: #007bff; --dark: #1e272e; }
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
-            display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; padding: 20px;
-        }
-        .login-box {
-            background: white; padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            width: 100%; max-width: 400px; text-align: center;
-        }
+        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; padding: 20px; }
+        .login-box { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); width: 100%; max-width: 400px; text-align: center; }
         .login-box h2 { color: var(--primary); margin-bottom: 10px; text-transform: uppercase; }
         .login-box p { color: #666; margin-bottom: 25px; }
         input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-        button {
-            width: 100%; padding: 12px; background: var(--primary); color: white; border: none;
-            border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px;
-        }
+        button { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
         button:hover { background: #0056b3; }
         .back-link { display: block; margin-top: 20px; text-decoration: none; color: #666; font-size: 0.9rem; }
     </style>
@@ -39,14 +37,14 @@
             <button type="submit">JE M'INSCRIS</button>
         </form>
 
-        <a href="front.html" class="back-link">← Retour à la boutique</a>
+        <a href="index.html" class="back-link">← Retour à la boutique</a>
     </div>
 
     <script>
         document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Empêche le rechargement standard
-            // Redirige vers la page d'accueil avec le code "success=1"
-            window.location.href = "front.html?success=1";
+            e.preventDefault();
+            // Redirige vers index.html avec le code succès
+            window.location.href = "index.html?success=1";
         });
     </script>
 
